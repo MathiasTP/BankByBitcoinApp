@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:ViewModels="clr-namespace:BankByBitcoinApp.ViewModels"
+             mc:Ignorable="d"
+             x:Class="BankByBitcoinApp.MainPage"
+             BackgroundColor="#1f2427"
+             
+             
+             >
+    <ContentPage.BindingContext>
+        <ViewModels:LoginPageViewModel/>
+    </ContentPage.BindingContext>
+
+
+    
+        <Grid RowSpacing="15">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="90"/>
+            <RowDefinition Height="110"/>
+            <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            
+        <Image  Source="LogoTest2" HorizontalOptions="Start" WidthRequest="160" HeightRequest="160" VerticalOptions="Start"  Aspect="AspectFill"  Grid.Row="0" Margin="10,15,0,0"/>
+
+
+        <Image Source="baggrund2" Aspect="AspectFill" Grid.Row="1" Grid.RowSpan="5" />
+        <Frame Grid.Row="2" VerticalOptions="Center" HorizontalOptions="Center"  BackgroundColor="#1f2427" CornerRadius="6" HasShadow="True" IsClippedToBounds="True" Opacity="1" Padding="8,5">
+            <Entry Grid.Row="2" Text="{Binding username}"  Placeholder="Username" WidthRequest="200" FontSize="Medium" HeightRequest="50"  PlaceholderColor="#f1c183" BackgroundColor="#1f2427" TextColor="#f1c183" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalOptions="Center" VerticalTextAlignment="Center"/>
+        </Frame>
+        <ActivityIndicator IsRunning="False" x:Name="Tænker" IsVisible="True" VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="0" Grid.RowSpan="5" />
+        <Frame Grid.Row="3" VerticalOptions="Center" HorizontalOptions="Center"  BackgroundColor="#1f2427" CornerRadius="6" HasShadow="True" IsClippedToBounds="True" Opacity="1" Padding="8,5">
+            <Entry Grid.Row="3" Text="{Binding password}" Placeholder="Password" IsPassword="True" WidthRequest="200" HeightRequest="50" PlaceholderColor="#f1c183" FontSize="Medium" BackgroundColor="#1f2427" TextColor="#f1c183" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalOptions="Center"/>
+        </Frame>
+
+
+        <Button Grid.Row="5" Command="{Binding OnLoginCommand}" Clicked="Button_Clicked" VerticalOptions="Center" HorizontalOptions="Center" Text="Log In" CornerRadius="25" TextColor="#f1c183" BorderColor="#f1c183" BorderWidth="2" BackgroundColor="#1f2427" WidthRequest="150" HeightRequest="50"/>
+
+        </Grid>
+
+        
+
+</ContentPage>

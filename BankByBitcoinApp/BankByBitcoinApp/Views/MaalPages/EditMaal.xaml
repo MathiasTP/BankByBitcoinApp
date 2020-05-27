@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BankByBitcoinApp.Views.MaalPages.EditMaal"
+             BackgroundColor="#1f2427">
+    <ContentPage.Content>
+        <ScrollView>
+
+
+            <Grid RowSpacing="10" Margin="15"  >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+
+                <Label Text="Opsparinger"
+                VerticalOptions="Start" 
+                HorizontalOptions="Start" FontSize="40" 
+                TextColor="White" FontAttributes="Bold" Grid.Row="0" />
+
+                <Label Text="Hvad vil du gerne spare op til?" Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Start" FontSize="25" TextColor="White"  />
+                <Entry  Grid.Row="2"  x:Name="MaalTitle" PlaceholderColor="White" TextColor="White"/>
+
+                <Label Text="Beskriv dit mål" Grid.Row="3" VerticalOptions="Center" HorizontalOptions="Start" FontSize="25" TextColor="White"  />
+                <Editor Grid.Row="4"  PlaceholderColor="White" TextColor="White" x:Name="MaalBeskrivelseEntry"/>
+
+                <Label Text="Hvor mange penge skal du spare sammen?" Grid.Row="5" VerticalOptions="Center" HorizontalOptions="Start" FontSize="25" TextColor="White"  />
+                <Entry Grid.Row="6" x:Name="MaalAmount"  PlaceholderColor="White" TextColor="White"/>
+
+                <Button Grid.Row="7" HorizontalOptions="Center" VerticalOptions="Center" Text="Gem" CornerRadius="15" WidthRequest="150" TextColor="#f1c183" BorderColor="#f1c183" BorderWidth="2" BackgroundColor="#1f2427" Clicked="Button_Clicked"/>
+
+            </Grid>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

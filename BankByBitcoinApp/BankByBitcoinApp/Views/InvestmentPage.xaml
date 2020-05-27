@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:ViewModels="clr-namespace:BankByBitcoinApp.ViewModels"
+             mc:Ignorable="d"
+             x:Class="BankByBitcoinApp.Views.InvestmentPage"
+             BackgroundColor="#1f2427"
+             
+             
+             >
+    <RefreshView Refreshing="RefreshView_Refreshing" x:Name="Refresh" >
+        <ScrollView>
+            <Grid RowSpacing="20" Padding="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+
+
+                <Image  Source="LogoTest2" HorizontalOptions="Start" WidthRequest="160" HeightRequest="160" VerticalOptions="Start"  Aspect="AspectFill"  Grid.Row="0" Margin="10,15,0,0"/>
+                <Button  ImageSource="menubar" HorizontalOptions="End" WidthRequest="50" HeightRequest="50" VerticalOptions="Start" Grid.Row="0" Margin="0,15,15,0" BackgroundColor="#1f2427" IsVisible="True" Opacity="1"  />
+                <Label  x:Name="NavnEntry" Text="Hej" HorizontalOptions="EndAndExpand"  VerticalOptions="End" FontSize="Medium" TextColor="#f1c183"  Grid.Row="0" Margin="0,65,15,0" />
+                <Label  Text="Initial Investment" Grid.Row="1" HorizontalOptions="Start" VerticalOptions="Start" TextColor="White" Margin="15,0,0,0" FontSize="Small" />
+                <Label x:Name="InvestmentAmount" Text="1000 DKK" Grid.Row="1" HorizontalOptions="Start" VerticalOptions="Center" TextColor="White" Margin="15,25,0,0" TextDecorations="Underline" FontSize="Small" />
+               
+                
+                <Image Source="baggrund2" Aspect="AspectFill" Grid.Row="2" Grid.RowSpan="5" />
+
+                <Frame Grid.Row="3" Grid.RowSpan="2" CornerRadius="30" HasShadow="True" Margin="5,0" HorizontalOptions="Fill" VerticalOptions="Start"  >
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="150"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="30"/>
+
+                        </Grid.ColumnDefinitions>
+
+                        <Label Text="Saldo" Grid.Row="0" Grid.Column="0" FontSize="Large"/>
+                        <Label x:Name="CurrentValueLabel" Grid.Row="1" Grid.Column="0"  Text="1100 kr"   FontSize="Large"  TextColor="Black" />
+                        <Label x:Name="BitcoinChangePrice" Grid.Row="1" Grid.Column="1" Text="00,00 kr. (-4,00%)" FontSize="Small" VerticalTextAlignment="Center"/>
+                        <Label  Grid.Row="1" Grid.Column="2"  Text="Idag" HorizontalOptions="End" VerticalTextAlignment="Center"/>
+                    </Grid>
+                </Frame>
+                
+                <Frame x:Name="OpsparingFrame"  Grid.Row="5" CornerRadius="30" Margin="5,0" HorizontalOptions="Fill" VerticalOptions="Fill" BackgroundColor="#34383b" Padding="5" IsVisible="True">
+                    <StackLayout>
+                        <Label Text="Opsparing" HorizontalOptions="Start" FontSize="20" VerticalOptions="Start" TextColor="White" Padding="10,10,0,0" />
+                        <Label Text="Penge uden drømme er bare penge. Se dine drømme komme tættere på målet som din investering stiger over tid. Opret dine første mål nu!" FontSize="15" TextColor="#adacae" Margin="5,5,5,5"  />
+                    </StackLayout>
+                </Frame>
+                <Button Grid.Row="5" x:Name="CloseButton" HorizontalOptions="End" VerticalOptions="Start" BackgroundColor="#34383b"  Margin="10,10,15,0" ImageSource="close" WidthRequest="40" HeightRequest="40" Clicked="Close_Clicked"   />
+                <Button Grid.Row="6" CornerRadius="30" Text="Opret dit første mål" VerticalOptions="Fill" HorizontalOptions="Fill" FontAttributes="Bold" Margin="60,30" TextColor="#f1c183" BorderColor="#f1c183" BorderWidth="2" BackgroundColor="#1f2427" Clicked="Opret_Maal_Clicked" />
+            </Grid>
+        </ScrollView>
+       
+
+    </RefreshView>
+
+
+</ContentPage>

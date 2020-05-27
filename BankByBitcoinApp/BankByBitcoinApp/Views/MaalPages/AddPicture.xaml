@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BankByBitcoinApp.Views.MaalPages.AddPicture"
+             BackgroundColor="#1f2427">
+    <ContentPage.Content>
+        <ScrollView>
+
+
+            <Grid RowSpacing="10" Margin="15"  >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="150"/>
+                    <RowDefinition Height="150"/>
+                    <RowDefinition Height="150"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Opsparinger"
+                VerticalOptions="Start" 
+                HorizontalOptions="Start" FontSize="40" 
+                TextColor="White" FontAttributes="Bold" Grid.Row="0" Grid.ColumnSpan="2" />
+
+                <Label Text="Knyt et billede til dit mål/opsparing" Grid.Row="1" Grid.ColumnSpan="2" VerticalOptions="Center" HorizontalOptions="Start" FontSize="25" TextColor="White"  />
+                <ImageButton x:Name="Image1" Grid.Row="2" Grid.Column="0" Source="https://cdn.pixabay.com/photo/2014/08/05/10/27/iphone-410311_960_720.jpg" CornerRadius="20" HorizontalOptions="Center" VerticalOptions="Center" Aspect="Fill" Clicked="Image1_Clicked" />
+                <ImageButton x:Name="Image2" Grid.Row="2" Grid.Column="1" Source="https://cdn.pixabay.com/photo/2014/09/24/14/29/mac-459196_960_720.jpg" CornerRadius="20" HorizontalOptions="Center" VerticalOptions="Center" Aspect="Fill" Clicked="Image2_Clicked" />
+                <ImageButton x:Name="Image3" Grid.Row="3" Grid.Column="0" Source="https://cdn.pixabay.com/photo/2016/12/18/14/31/lake-1915846__340.jpg" CornerRadius="20" HorizontalOptions="Center" VerticalOptions="Center" Aspect="Fill"  Clicked="Image3_Clicked" />
+                <ImageButton x:Name="Image4" Grid.Row="3" Grid.Column="1" Source="https://cdn.pixabay.com/photo/2017/01/20/00/30/maldives-1993704__340.jpg" CornerRadius="20" HorizontalOptions="Center" VerticalOptions="Center" Aspect="Fill"  Clicked="Image4_Clicked"/>
+                <ImageButton x:Name="Image5" Grid.Row="4" Grid.Column="0" Source="https://cdn.pixabay.com/photo/2019/05/14/23/36/ferrari-4203826_960_720.jpg" CornerRadius="20" HorizontalOptions="Center" VerticalOptions="Center" Aspect="Fill"  Clicked="Image5_Clicked" />
+                <ImageButton x:Name="Image6" Grid.Row="4" Grid.Column="1" Source="https://cdn.pixabay.com/photo/2015/05/29/19/18/bicycle-789648_960_720.jpg" CornerRadius="20" HorizontalOptions="Center" VerticalOptions="Center" Aspect="Fill" Clicked="Image6_Clicked" />
+                <Button Grid.Row="7" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Center" Text="Færdig" CornerRadius="15" WidthRequest="150" TextColor="#f1c183" BorderColor="#f1c183" BorderWidth="2" BackgroundColor="#1f2427" Clicked="Done_Clicked" />
+
+                
+            </Grid>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
